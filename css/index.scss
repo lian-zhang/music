@@ -1,0 +1,601 @@
+body,h1,h2,h3,h5,h6,pre,p,ol,ul,li,form,img input,textarea,dl,dd,dt,span,div{
+  margin:0;
+  padding:0;
+  }
+  ul,ol{
+  list-style:none;
+  }
+  a{
+  text-decoration:none;
+  }
+  body{
+  background:#fff;
+  }
+  *{
+  font-family:"微软雅黑","宋体","sans-serif";}
+  img
+  {
+  border:none;}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+}
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 16px;
+    background: #f0efe4;
+}
+$width-list:290px,320px,360px,375px,412px,414px,768px;
+$design-size:750px;
+@each $w in $width-list{
+    @media screen and (min-width:#{$w}){
+        html{
+            font-size: 100px * $w / $design-size;
+        }
+    }
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+  url('iconfont.woff') format('woff'),
+  url('iconfont.ttf') format('truetype'),
+  url('iconfont.svg#iconfont') format('svg');
+}
+.icon{
+  font-family:"iconfont" !important;
+  font-size:28px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.list ul .active{
+    color: #d42d5c;
+}
+@keyframes move{
+            0%{
+                transform: rotate(0);
+            }100%{
+                transform: rotate(360deg);
+            }   
+        }
+.move{animation: move 2s linear 2s infinite;}          
+.box1{
+    width: 100%;
+    height: 13.4rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.header{
+    width: 100%;
+    height: 2.35rem;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    z-index: 2;
+    .header1{
+        width: 100%;
+        height: 1.25rem;
+        background: #3c3d45;
+        opacity: 0.8;
+        border-bottom: 2px solid #08080a;
+        .title{
+            width: 100%;
+            height: 0.66rem;
+            padding-top: 0.59rem;
+            color: #fff;
+            text-align: center;           
+        }
+    }
+    .header2{
+        width: 100%;
+        height: 1.1rem;
+        background: #3c3d45;
+         opacity: 0.8;
+        .jin,.laba{
+            position: absolute;
+            width: 0.6rem;
+            height:0.3rem;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            text-align: center;
+            line-height: 0.3rem;
+            color: #d8d7ce;
+        }
+        .jin{
+            left: 0.3rem;
+            i{font-size: 22px;}
+        }
+        .laba{
+            right: 0.3rem;
+        }
+        .vtiao{
+            position: absolute;
+            top: 0;    
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 60%;
+            height: 0.1rem;
+            background: #d8d7ce;
+            border-radius: 0.1rem;
+            .vcircle{
+                width: 0.4rem;
+                height: 0.4rem;
+                border-radius: 50%;
+                position: absolute;
+                right: -0.2rem;
+                top: -0.15rem;
+                background: #d42d5c;
+//              opacity: 0.5;
+                }
+        }
+    }
+}
+//.h-l ,.h-r{
+//  position: absolute;
+//  top: 0;
+//  bottom: 0;
+//  margin: auto;
+//  width: 0.94rem;
+//  height: 0.67rem;
+//  border: 2px solid #b2b1a5;
+//  border-radius: 5px;
+//  text-align: center;
+//  line-height: 0.6rem;
+//  i{
+//      color: #b2b1a5;        
+//      font-size: 28px;
+//  }
+//}
+//.h-l{
+//  left: .3rem;
+//  
+//}
+//.h-r{
+//  right: .3rem;
+//  i{font-size: 22px;}
+//}
+.bot{
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+    width: 100%;
+    height: 6.9rem;
+    overflow: hidden;
+    .tu1,.tu2,.tu3,.tu4{        
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    } 
+    .tu1{
+       width: 86%; 
+    }
+    .tu2{
+       width: 80%;  
+    } 
+    .tu3{
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+        overflow: hidden;
+        .tu4{width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 50%;
+           width: 100%;
+        }
+    }
+    .tiao{
+       position: absolute;
+       right: 0.8rem;
+       bottom: 0.5rem;
+       width: 60%;
+       -webkit-transform: rotate(20deg);
+       -moz-transform: rotate(20deg);
+        
+    }  
+}
+.bot1{
+    position: absolute;
+    top: 8.15rem;
+    left: 0;
+    width: 100%;
+    height: 1.2rem;
+    .p1,.p2,.p3{
+        width: 100%;
+        height: 0.6rem;
+        text-align: center;
+        line-height: 0.6rem;
+    }
+    .p1{
+       color: #5d5c54; 
+    }
+    .p2{
+       font-size: 20px;
+       color: #595850; 
+    }
+    .p3{
+       color: #5d5c54; 
+    }
+}
+.bot2{
+    position: absolute;
+    top: 9.35rem;
+    left: 0;
+    width: 100%;
+    height: 1.3rem;
+    padding: 0rem 0.2rem;
+}
+.tiao2{
+    position: absolute;
+    top: 0.2rem;    
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    height: 0.1rem;
+    background: #d8d7ce;
+    border-radius: 0.1rem;
+    .circle{
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        position: absolute;
+        left: -0.2rem;
+        top: -0.15rem;
+        background: #d42d5c;
+        opacity: 0.5;
+        }
+}
+.start,.end{
+    width: 1rem;
+    height: 0.5rem;
+    position: absolute;
+    bottom: 0.25rem;
+    line-height: 0.5rem;
+    text-align: center;
+    color: #d8d7cf;
+}
+.start{
+    left: 0.6rem;
+}
+.end{
+    right: 0.6rem;
+}  
+.bot3{
+    position: absolute;
+    top: 10.65rem;
+    left: 0;
+    width: 100%;
+    height: 2.68rem;
+    .yuan1,.yuan2,.yuan3{
+        width: 1.05rem;
+        height: 1.05rem;
+        border-radius: 50%;
+        border: 2px solid #b2b1a5;
+        position: absolute;
+        top: 0;
+//      bottom: 0;        
+//      margin: auto;
+        
+    }
+    .yuan1{
+        left: 0.6rem;
+        background: #ecebe0;
+        line-height: 1.05rem;
+        text-align: center;
+        i{
+                font-size: 18px;
+                color: #d42d5c;
+            }
+    }
+    .yuan2{
+        right: 2rem;
+        background: #d0cec3;
+        
+    }
+    .yuan3{
+        right: 0.6rem;
+        background: #d0cec3;
+    }
+    .yuan21,.yuan31{
+            width: 1.05rem;
+            height: 1.05rem;
+            border-radius: 50%;
+            background: #edebe0;
+            position: absolute;
+            left: -0.05rem;
+            bottom: 0.1rem;
+            line-height: 1.05rem;
+            text-align: center;
+            border-top: 1px solid #dddbcf;
+            i{
+                font-size: 18px;
+                color: #b2b1a5;
+            }
+        }
+}
+.foot{
+    width: 100%;
+    height: 1.2rem;
+    background: #2b2d32;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.9;
+    ul{
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        li{
+            width: 20%;
+            height: 100%;
+            float: left;
+            color: #aaa;
+            font-size: .2rem;
+            text-align: center;
+            .logos{
+                width: .6rem;
+                height: .6rem;
+                 position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+                top: .1rem;
+                background-size: contain;
+            }
+            div:nth-of-type(2){
+                 position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+                bottom: .15rem;
+            } 
+          } 
+          li:nth-of-type(1){
+            .logos{
+                width: .75rem;
+                height: .75rem;
+                top: .05rem;
+                background-image: url(../images/songs.png);
+            }
+          }
+          li:nth-of-type(2){
+            .logos{
+                background-image: url(../images/albums.png);
+            }
+          }
+          li:nth-of-type(3){
+            .logos{
+                background-image: url(../images/plauing.png);
+            }
+          }
+          li:nth-of-type(4){
+            .logos{
+                background-image: url(../images/artists.png); 
+            }
+          }
+          li:nth-of-type(5){
+            .logos{
+                background-image: url(../images/settings.png); 
+            }
+          }
+            
+    }
+    
+}
+//歌词页
+.box2{
+    width: 100%;
+    height: 13.4rem;
+//  background: pink;
+    position: absolute;
+    left: 0;
+    top: 13.4rem;
+    z-index: 4;
+    display: none;
+}
+.header1{
+        width: 100%;
+        height: 1.25rem;
+        background: #3c3d45;
+        border-bottom: 2px solid #08080a;
+        .title{
+            width: 100%;
+            height: 0.66rem;
+            padding-top: 0.59rem;
+            color: #fff;
+            text-align: center;           
+        }
+} 
+.bot21{
+    width: 100%;
+    height: auto;
+    .name{
+        width: 100%;
+        height: 1rem;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+} 
+.bot22{
+    width: 100%;
+    height: 0.8rem;
+    .div{
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        .div1,.div2,.div3{
+            width: 1rem;
+            height: 0.5rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            text-align: center;
+            border: 2px solid #4c4b44;
+            border-radius: 0.1rem;
+            color: #4c4b44;
+        }
+        .div1{
+             left: 0;
+             width: 1.2rem;
+             i{
+                 font-size: 16px;
+             }
+        }
+        .div2{
+            left: 0;
+            right: 0;          
+        }
+        .div3{
+            color: #b7b6ab;
+            right: 0.2rem;
+            border: 2px solid #b7b6ab;
+        }
+    }    
+}
+.bot23{
+    width: 100%;
+    height: auto;
+    .shadow1,.shadow2{
+        position: absolute;
+        left: 0;        
+        width: 100%;
+        height: 1.5rem;
+        background: #ebeadf;
+//      background: red;
+        opacity: 0.5;
+        z-index: 2;
+    }
+    .shadow1{
+       top: 0; 
+    }
+    .shadow2{
+        bottom: 0;
+    }
+    .ci{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      .p21{
+          width: 100%;
+          height: 0.8rem;
+          color: #4c4b44;
+          text-align: center;
+          line-height: 0.8rem;
+      }  
+    }
+} 
+//列表页
+.box3{
+    width: 100%;
+    height: 13.4rem;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 5;
+} 
+.shadow{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #767670;
+    opacity: 0.5;
+    z-index: 3;
+}
+.list{
+    width: 100%;
+    height: 8.4rem;
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    background: #3c3d45;
+    z-index: 3;
+    ul{
+        width: 100%;
+        height: auto;
+        li{
+            width: 100%;
+            height: 0.82rem;
+            padding: 0 0.35rem;
+            border-bottom: 1px solid #ebeadf;
+            line-height: 0.82rem;
+            color: #fff; 
+            .i5,.i6{
+                float: right;
+                font-size: 20px;
+                color: #b7b6ab; 
+            }
+            .i6{
+                margin-right: 0.3rem;
+            }
+        }
+    }
+}
+.list-top{
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #ebeadf;
+    padding: 0 0.35rem;
+    line-height: 1rem;
+    i{
+       color: #b7b6ab; 
+       float: left;
+       font-size: 22px;
+    }
+    .p1{
+       margin-left:0.2rem ;
+       color: #fff; 
+       float: left; 
+    }
+    .p2{
+       color: #b7b6ab; 
+       float: left;
+    }
+    .i2,.i3,.i4{
+       color: #b7b6ab; 
+       float: right; 
+    }
+    .i3{
+        margin: 0 0.3rem;
+    }
+}
+.close{
+    width: 100%;
+    height: 1.2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #252930;
+    text-align: center;
+    line-height: 1.2rem;
+    color: #fff;
+    z-index: 3;
+} 
+   
